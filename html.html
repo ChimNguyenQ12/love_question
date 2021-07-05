@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Nhập a: </h1> <input id="txt_a" type="text">
+    <h1>Nhập b: </h1> <input id="txt_b" type="text">
+    <br>
+    <h1>Chọn phép tính</h1>
+    <select name="" id="phep_tinh">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+
+    </select>
+    <h1> Kết quả </h1>
+    <input id="txt_ket_qua" type="text">
+    <button onclick="Tinh()">Tính</button>
+
+
+</body>
+<script>
+    function Tinh() {
+        console.log("CC")
+        var a = document.getElementById("txt_a").value
+        var b = document.getElementById("txt_b").value
+        var phep_tinh = document.getElementById("phep_tinh").value;
+        var ketqua = 0;
+        if (phep_tinh == "+")
+            ketqua = parseInt(a) + parseInt(b);
+        else if (phep_tinh == "-")
+            ketqua = parseInt(a) - parseInt(b);
+        else if (phep_tinh == "*")
+            ketqua = parseInt(a) * parseInt(b);
+        else if (phep_tinh == "/")
+            ketqua = parseInt(a) / parseInt(b);
+        console.log(ketqua);
+        document.getElementById("txt_ket_qua").value = ketqua;
+
+    }
+
+</script>
+
+</html>
